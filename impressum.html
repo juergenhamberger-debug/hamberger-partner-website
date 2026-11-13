@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Impressum – Dr. Hamberger &amp; Partner</title>
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/manrope-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/manrope-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/manrope-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/manrope-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/manrope-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-mono-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/dm-mono-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/newsreader-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:500;font-display:swap;src:url('fonts/newsreader-latin-500-italic.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:600;font-display:swap;src:url('fonts/newsreader-latin-600-italic.woff2') format('woff2')}
+
+:root{--ink:#111315;--paper:#f5f3ee;--copper:#c85d35;--muted:#5c5d58;--line:rgba(17,19,21,.16);--mono:"DM Mono",ui-monospace,monospace;--sans:"Manrope",system-ui,sans-serif;--serif:"Newsreader",Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px}
+.topbar{height:92px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{color:var(--ink);text-decoration:none;display:inline-flex;flex-direction:column;line-height:1.1}
+.brand-name{display:flex;align-items:baseline;gap:4px;font-size:21px;font-weight:800;letter-spacing:-.065em;white-space:nowrap}
+.brand-prefix{font-size:.65em;font-weight:600;letter-spacing:-.03em}
+.brand-amp{display:inline-block;margin:0 2px;color:var(--copper);font-family:var(--serif);font-size:1.46em;font-weight:500;line-height:.52;letter-spacing:-.12em;transform:translateY(3px)}
+.brand-partner{font-weight:600;letter-spacing:-.06em}
+.brand small{display:block;margin-top:8px;color:var(--muted);font:500 9.5px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.actions{display:flex;align-items:center;gap:26px}
+.back{font:500 13px var(--mono);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px}
+.lang-switch{display:inline-flex;border:1px solid var(--ink);border-radius:999px;padding:2px}
+.lang-switch button{appearance:none;border:0;background:transparent;color:var(--ink);font:500 12px/1 var(--mono);letter-spacing:.08em;padding:7px 10px;border-radius:999px;cursor:pointer}
+.lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+main{max-width:820px;margin:0 auto;padding:80px 6vw 110px}
+h1{margin:0 0 40px;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.065em}
+h2{margin:52px 0 14px;font-size:24px;line-height:1.2;letter-spacing:-.03em}
+h3{margin:30px 0 8px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+p{margin:0 0 14px}
+p.caps{font-size:14px;letter-spacing:.01em}
+ul{margin:0 0 16px;padding-left:22px}
+li{margin:3px 0}
+.note{margin-top:40px;font-size:14px;color:var(--muted)}
+[data-lang-block]{display:none}
+html[lang="de"] [data-lang-block="de"],html[lang="en"] [data-lang-block="en"]{display:block}
+footer{padding:40px 4vw;background:#0b0d0e;color:#cfccc4;font-size:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none;margin-left:22px}
+@media(max-width:700px){.topbar{height:auto;padding:18px 5vw;gap:14px;flex-wrap:wrap}.back{display:none}main{padding-top:50px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-name"><span class="brand-prefix">Dr.</span><span>Hamberger</span><span class="brand-amp">&amp;</span><span class="brand-partner">Partner</span></span><small data-de="Markt- &amp; Organisationsforschung" data-en="Market &amp; Organisational Research">Markt- &amp; Organisationsforschung</small></a>
+  <div class="actions">
+    <a class="back" href="index.html" data-de="← Zur Startseite" data-en="← Back to homepage">← Zur Startseite</a>
+    <div class="lang-switch" role="group" aria-label="Sprache / Language"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+  </div>
+</header>
+<main>
+<section data-lang-block="de">
+<h1>Impressum</h1>
+<h3>Angaben gemäß § 5 DDG und § 18 MStV</h3>
+<p>Dr. Jürgen Hamberger<br>Dr. Hamberger & Partner – Marktforschung und Strategieberatung<br>Schützenstr. 6b<br>21337 Lüneburg</p>
+<h3>Kontakt</h3>
+<p>Telefon: +49 155 60340633<br>E-Mail: <a href="mailto:hamberger@hamberger-partner.de">hamberger@hamberger-partner.de</a></p>
+<h3>Umsatzsteuer</h3>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE 259711661</p>
+<h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+<p>Dr. Jürgen Hamberger<br>Schützenstr. 6b<br>21337 Lüneburg</p>
+<h3>Online-Streitbeilegung</h3>
+<p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+<h3>Alternative Streitbeilegung</h3>
+<p>Ich bin weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+</section>
+<section data-lang-block="en">
+<h1>Legal notice</h1>
+<h3>Information pursuant to § 5 DDG and § 18 MStV</h3>
+<p>Dr. Jürgen Hamberger<br>Dr. Hamberger & Partner – Marktforschung und Strategieberatung<br>Schützenstr. 6b<br>21337 Lüneburg, Germany</p>
+<h3>Contact</h3>
+<p>Phone: +49 155 60340633<br>Email: <a href="mailto:hamberger@hamberger-partner.de">hamberger@hamberger-partner.de</a></p>
+<h3>VAT</h3>
+<p>VAT identification number pursuant to § 27a UStG: DE 259711661</p>
+<h3>Responsible for content pursuant to § 18 (2) MStV</h3>
+<p>Dr. Jürgen Hamberger<br>Schützenstr. 6b<br>21337 Lüneburg, Germany</p>
+<h3>Online dispute resolution</h3>
+<p>The European Commission provides a platform for online dispute resolution: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+<h3>Alternative dispute resolution</h3>
+<p>I am neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+<p class="note">This English version is a courtesy translation; the German version is authoritative.</p>
+</section>
+</main>
+<footer><span>Dr. Hamberger &amp; Partner · Schützenstraße 6b · 21337 Lüneburg</span><span><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a><a href="impressum.html" data-de="Impressum" data-en="Legal notice">Impressum</a></span></footer>
+<script>
+(() => {
+  const titles = { de: "Impressum – Dr. Hamberger & Partner", en: "Legal notice – Dr. Hamberger & Partner" };
+  const set = lang => {
+    document.documentElement.lang = lang;
+    document.title = titles[lang];
+    document.querySelectorAll("[data-de]").forEach(el => el.textContent = el.dataset[lang]);
+    document.querySelectorAll(".lang-switch button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    try { localStorage.setItem("hp-lang", lang); } catch (e) {}
+  };
+  document.querySelectorAll(".lang-switch button").forEach(b => b.addEventListener("click", () => set(b.dataset.lang)));
+  let lang = "de";
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q === "en" || q === "de") lang = q; else { try { lang = localStorage.getItem("hp-lang") || "de"; } catch (e) {} }
+  set(lang);
+})();
+</script>
+</body>
+</html>

@@ -2,13 +2,22 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
+<meta name="robots" content="noindex" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Dr. Hamberger &amp; Partner: Markt- und Organisationsforschung für Entscheidungen mit Substanz." />
 <title>Dr. Hamberger &amp; Partner — Markt- und Organisationsforschung</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet" />
 <style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/manrope-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/manrope-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/manrope-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/manrope-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/manrope-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-mono-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/dm-mono-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/newsreader-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:500;font-display:swap;src:url('fonts/newsreader-latin-500-italic.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:600;font-display:swap;src:url('fonts/newsreader-latin-600-italic.woff2') format('woff2')}
+
 /* =========================================================
    Dr. Hamberger & Partner — Relaunch (überarbeitete Fassung)
    Ein Stylesheet statt acht Einzeldateien.
@@ -639,7 +648,7 @@ h1,h2,h3{font-weight:700}
           <label>Worum geht es?<select name="topic"><option>Allgemeine Anfrage</option><option>Markt- und Organisationsforschung</option><option>Wirkung &amp; Evaluation</option><option>KI-Sprachdialog</option><option>Repertory Grid</option></select></label>
         </div>
         <label>Ihre Nachricht<textarea name="message" rows="5" required placeholder="Was möchten Sie klären oder entscheiden?"></textarea></label>
-        <label class="privacy"><input type="checkbox" name="privacy" required /><span>Ich habe die <a href="https://www.hamberger-partner.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> zur Kenntnis genommen.</span></label>
+        <label class="privacy"><input type="checkbox" name="privacy" required /><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> zur Kenntnis genommen.</span></label>
         <button class="button form-submit" type="submit">Anfrage senden <span>→</span></button>
         <p class="form-hint" aria-live="polite"></p>
       </form>
@@ -654,7 +663,7 @@ h1,h2,h3{font-weight:700}
   </a>
   <address><span class="footer-label">Anschrift</span>Schützenstraße 6b<br>21337 Lüneburg</address>
   <div><span class="footer-label">Kontakt</span><a href="mailto:info@hamberger-partner.de">info@hamberger-partner.de</a></div>
-  <nav class="footer-legal" aria-label="Rechtliches"><a href="https://www.hamberger-partner.de/datenschutz">Datenschutz</a><a href="https://www.hamberger-partner.de/impressum">Impressum</a></nav>
+  <nav class="footer-legal" aria-label="Rechtliches"><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a></nav>
 </footer>
 
 <script>
