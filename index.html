@@ -950,7 +950,15 @@ contactForm.addEventListener("submit", async event => {
         })
       });
       const out = await res.json().catch(() => ({}));
-      if (!res.ok || String(out.success) !== "true") throw new Error(out.message || res.status);
+      if (!res.ok || String(out.success) !== "true") {
+        console.warn("FormSubmit:", res.status, out.message);
+        if (/activat/i.test(out.message || "")) {           // erste Anfrage: Formular muss einmal bestätigt werden
+          hint.textContent = L("Das Formular wird gerade eingerichtet: Bitte bestätigen Sie einmalig die Aktivierungs-Mail von FormSubmit an " + MAIL_TO + " und senden Sie dann erneut.",
+                               "The form is being set up: please confirm the one-time activation email from FormSubmit sent to " + MAIL_TO + ", then send again.");
+          return;
+        }
+        throw new Error(out.message || res.status);
+      }
       contactForm.reset();
       hint.textContent = L("Vielen Dank. Ihre Anfrage ist angekommen – ich melde mich persönlich bei Ihnen.",
                            "Thank you. Your enquiry has been received – I will get back to you personally.");
