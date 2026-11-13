@@ -919,7 +919,10 @@ fitVoice(); mqNarrow.addEventListener("change", fitVoice);
 const MAIL_TO = "hamberger@hamberger-partner.de";   // Empfänger der Formularanfragen
 // Formulardienste nehmen nur Anfragen von echten Webseiten (http/https) an.
 // Wird die Datei lokal geöffnet (file://), öffnet sich ersatzweise das Mailprogramm.
-const FORM_ENDPOINT = location.protocol.startsWith("http") ? "https://formsubmit.co/ajax/" + MAIL_TO : "";
+// Kennung von FormSubmit (statt der E-Mail-Adresse, damit sie nicht im Quelltext steht).
+// Gilt für hamberger@hamberger-partner.de; aktiviert am 13.11.2026.
+const FORMSUBMIT_ID = "469749ba2906b4fd9f776d08e8f6f937";
+const FORM_ENDPOINT = location.protocol.startsWith("http") ? "https://formsubmit.co/ajax/" + FORMSUBMIT_ID : "";
 const contactForm = document.querySelector("#contact-form");
 const hint = contactForm.querySelector(".form-hint");
 contactForm.addEventListener("submit", async event => {
