@@ -1,0 +1,36 @@
+# robots.txt – hamberger-partner.de
+# Alle Suchmaschinen und KI-Assistenten dürfen die Website lesen.
+
+User-agent: *
+Allow: /
+
+# KI-Suche: ChatGPT (OpenAI)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# KI-Suche: Claude (Anthropic)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# KI-Suche: Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Trainings-Crawler – bewusst erlaubt, damit die Firma im Wissen der Modelle vorkommt.
+# Zum Sperren "Allow: /" durch "Disallow: /" ersetzen.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://hamberger-partner.de/sitemap.xml
