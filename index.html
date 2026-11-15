@@ -445,7 +445,7 @@ h1,h2,h3{font-weight:700}
 .detail-question{margin:30px 0 32px;padding:18px 22px;max-width:520px;background:var(--cream);border-left:3px solid var(--copper)}
 .detail-question small{display:block;margin-bottom:6px;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .detail-question p{margin:0;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.35;letter-spacing:-.01em}
-.portfolio-detail .text-link{margin-top:auto}
+.portfolio-detail .detail-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:16px 30px}
 
 /* =========================================================
    Vorgehen (einzige Kupferfläche der Seite)
@@ -767,7 +767,7 @@ h1,h2,h3{font-weight:700}
         <button class="portfolio-tab" role="tab" aria-selected="false" data-panel="organisation"><span>06</span> Organisation &amp; Stakeholder <i>→</i></button>
         <button class="portfolio-tab" role="tab" aria-selected="false" data-panel="evaluation"><span>07</span> Wirkung &amp; Evaluation <i>→</i></button>
       </div>
-      <article class="portfolio-detail" id="portfolio-detail" aria-live="polite"><p class="detail-number">01 / Marke</p><h3>Eine Marke ist stark, wenn sie einen klaren Platz im Kopf und im Leben der Menschen hat.</h3><p class="detail-text">Wir zeigen, wofür Ihre Marke steht, wie sie sich vom Wettbewerb unterscheidet und welche Hebel ihre Wirkung erhöhen.</p><div class="tags"><span>Markenbild</span><span>Positionierung</span><span>Markentreiber</span><span>Tracking</span></div><div class="detail-question"><small>Typische Frage</small><p>„Wofür stehen wir aus Sicht unserer Kunden – und was unterscheidet uns wirklich?“</p></div><a href="#kontakt" class="text-link">Frage besprechen <b>→</b></a></article>
+      <article class="portfolio-detail" id="portfolio-detail" aria-live="polite"><p class="detail-number">01 / Marke</p><h3>Eine Marke ist stark, wenn sie einen klaren Platz im Kopf und im Leben der Menschen hat.</h3><p class="detail-text">Wir zeigen, wofür Ihre Marke steht, wie sie sich vom Wettbewerb unterscheidet und welche Hebel ihre Wirkung erhöhen.</p><div class="tags"><span>Markenbild</span><span>Positionierung</span><span>Markentreiber</span><span>Tracking</span></div><div class="detail-question"><small>Typische Frage</small><p>„Wofür stehen wir aus Sicht unserer Kunden – und was unterscheidet uns wirklich?“</p></div><div class="detail-links"><a href="#kontakt" class="text-link">Frage besprechen <b>→</b></a></div></article>
     </div>
   </section>
 
@@ -855,7 +855,7 @@ h1,h2,h3{font-weight:700}
         </div>
         <h3>KI-Sprachdialog: Scannen. Sprechen. Zusammenhänge verstehen.</h3>
         <p>Für die Befragten ist es denkbar einfach: QR-Code mit dem Smartphone scannen und losreden. Der KI-Dialog fragt nach und vertieft dort, wo es interessant wird. Wir werten die Gespräche aus und machen sichtbar, welche Bedeutungen und Zusammenhänge hinter den Antworten stehen.</p>
-        <a class="text-link on-dark" href="#kontakt">Voice Research kennenlernen <b>→</b></a>
+        <a class="text-link on-dark" href="/feedback-qr-code/">Voice Research kennenlernen <b>→</b></a>
       </article>
     </div>
   </section>
@@ -964,11 +964,15 @@ const fields = {
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const detail = document.querySelector("#portfolio-detail");
 let currentField = "marke";
+const fieldLinks = {
+  zielgruppe:{url:"/kundenzufriedenheit/", de:"Kundenzufriedenheit & Customer Journey", en:"Customer satisfaction & journey"},
+  organisation:{url:"/mitarbeiterbefragung/", de:"Mitarbeiterbefragung", en:"Employee surveys"}
+};
 const renderField = key => {
   currentField = key;
   const f = fields[key][window.siteLang];
   const q = window.siteLang === "en" ? `“${esc(f.q)}”` : `„${esc(f.q)}“`;
-  detail.innerHTML = `<p class="detail-number">${esc(f.n)}</p><h3>${esc(f.title)}</h3><p class="detail-text">${esc(f.text)}</p><div class="tags">${f.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div class="detail-question"><small>${L("Typische Frage","Typical question")}</small><p>${q}</p></div><a href="#kontakt" class="text-link">${L("Frage besprechen","Discuss your question")} <b>→</b></a>`;
+  detail.innerHTML = `<p class="detail-number">${esc(f.n)}</p><h3>${esc(f.title)}</h3><p class="detail-text">${esc(f.text)}</p><div class="tags">${f.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div class="detail-question"><small>${L("Typische Frage","Typical question")}</small><p>${q}</p></div><div class="detail-links"><a href="#kontakt" class="text-link">${L("Frage besprechen","Discuss your question")} <b>→</b></a>${fieldLinks[key] ? `<a href="${fieldLinks[key].url}" class="text-link">${L(fieldLinks[key].de, fieldLinks[key].en)} <b>→</b></a>` : ""}</div>`;
 };
 renderField("marke");
 document.querySelectorAll(".portfolio-tab").forEach(button => button.addEventListener("click", () => {
