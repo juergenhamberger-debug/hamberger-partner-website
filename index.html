@@ -855,7 +855,7 @@ h1,h2,h3{font-weight:700}
         </div>
         <h3>KI-Sprachdialog: Scannen. Sprechen. Zusammenhänge verstehen.</h3>
         <p>Für die Befragten ist es denkbar einfach: QR-Code mit dem Smartphone scannen und losreden. Der KI-Dialog fragt nach und vertieft dort, wo es interessant wird. Wir werten die Gespräche aus und machen sichtbar, welche Bedeutungen und Zusammenhänge hinter den Antworten stehen.</p>
-        <a class="text-link on-dark" href="/feedback-qr-code/">Voice Research kennenlernen <b>→</b></a>
+        <a class="text-link on-dark" href="#kontakt">Voice Research kennenlernen <b>→</b></a>
       </article>
     </div>
   </section>
@@ -964,10 +964,7 @@ const fields = {
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const detail = document.querySelector("#portfolio-detail");
 let currentField = "marke";
-const fieldLinks = {
-  zielgruppe:{url:"/kundenzufriedenheit/", de:"Kundenzufriedenheit & Customer Journey", en:"Customer satisfaction & journey"},
-  organisation:{url:"/mitarbeiterbefragung/", de:"Mitarbeiterbefragung", en:"Employee surveys"}
-};
+const fieldLinks = {};
 const renderField = key => {
   currentField = key;
   const f = fields[key][window.siteLang];
