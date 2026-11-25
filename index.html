@@ -692,16 +692,17 @@ h1,h2,h3{font-weight:700}
 <header class="topbar">
   <a class="brand" href="#start" aria-label="Zur Startseite">
     <span class="brand-name"><span class="brand-prefix">Dr.</span><span class="brand-surname">Hamberger</span><span class="brand-amp">&amp;</span><span class="brand-partner">Partner</span></span>
-    <small>Markt- &amp; Organisationsforschung</small>
+    <small>Markt-, Organisations- &amp; Evaluationsforschung</small>
   </a>
   <nav aria-label="Hauptnavigation">
+    <a href="#start">Home</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#vorgehen">Wie wir arbeiten</a>
-    <a href="#besonderheiten">Besondere Zugänge</a>
+    <a href="#besonderheiten">Spezielle Methoden</a>
   </nav>
   <div class="topbar-actions">
     <div class="lang-switch" role="group" aria-label="Sprache wählen"><button type="button" data-lang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button></div>
-    <a class="nav-cta" href="#kontakt">Gespräch beginnen <span>→</span></a>
+    <a class="nav-cta" href="#kontakt">Kontakt <span>→</span></a>
   </div>
 </header>
 
@@ -794,7 +795,7 @@ h1,h2,h3{font-weight:700}
   <!-- ============ BESONDERE ZUGÄNGE ============ -->
   <section class="specials section-pad" id="besonderheiten">
     <div class="split-heading">
-      <div><p class="section-kicker">Besondere Zugänge</p><h2>Wenn das Offensichtliche<br>nicht ausreicht.</h2></div>
+      <div><p class="section-kicker">Spezielle Methoden</p><h2>Wenn das Offensichtliche<br>nicht ausreicht.</h2></div>
       <p>Zwei Zugänge erweitern klassische Forschung dort, wo Motive, Sprache und persönliche Bewertungsmaßstäbe entscheidend werden.</p>
     </div>
     <div class="special-grid">
@@ -925,7 +926,7 @@ h1,h2,h3{font-weight:700}
 <footer class="site-footer">
   <a class="brand" href="#start" aria-label="Zur Startseite">
     <span class="brand-name"><span class="brand-prefix">Dr.</span><span class="brand-surname">Hamberger</span><span class="brand-amp">&amp;</span><span class="brand-partner">Partner</span></span>
-    <small>Markt- &amp; Organisationsforschung</small>
+    <small>Markt-, Organisations- &amp; Evaluationsforschung</small>
   </a>
   <address><span class="footer-label">Anschrift</span>Schützenstraße 6b<br>21337 Lüneburg</address>
   <div><span class="footer-label">Kontakt</span><a href="mailto:hamberger@hamberger-partner.de">hamberger@hamberger-partner.de</a></div>
@@ -958,13 +959,13 @@ const fields = {
     de:{n:"06 / Organisation & Stakeholder",title:"Auch Organisationen werden erlebt, bewertet und weiterempfohlen.",text:"Wir ermitteln, was Mitarbeiter, Mitglieder und Stakeholder verbindet, irritiert oder bewegt — als Grundlage für Entwicklung und Bindung.",tags:["Mitarbeiterbefragung","Employer Brand","Stakeholder","Kultur"],q:"Was bindet Mitarbeitende und Partner – und was steht im Weg?"},
     en:{n:"06 / Organisation & stakeholders",title:"Organisations, too, are experienced, judged and recommended.",text:"We find out what connects, irritates or motivates employees, members and stakeholders — as a basis for development and loyalty.",tags:["Employee survey","Employer brand","Stakeholders","Culture"],q:"What keeps employees and partners engaged – and what gets in the way?"}},
   evaluation:{
-    de:{n:"07 / Wirkung & Evaluation",title:"Wirkung zeigt sich nicht nur im Ergebnis. Sondern darin, was sich tatsächlich verändert.",text:"Wir prüfen, ob Maßnahmen, Kommunikation und Angebote die gewünschte Wirkung erzielen — und was sich für die nächste Entscheidung daraus lernen lässt.",tags:["Wirkungsanalyse","Programmevaluation","Zielerreichung","Lernschleifen"],q:"Hat die Maßnahme gewirkt – und was machen wir beim nächsten Mal anders?"},
-    en:{n:"07 / Impact & evaluation",title:"Impact is not only visible in results. It shows in what actually changes.",text:"We assess whether measures, communication and offers achieve the intended effect — and what can be learned from this for the next decision.",tags:["Impact analysis","Programme evaluation","Goal attainment","Learning loops"],q:"Did the measure work – and what will we do differently next time?"}}
+    de:{n:"07 / Wirkung & Evaluation",title:"Evaluation bewertet, ob eine Maßnahme erreicht, was sie erreichen soll.",text:"Anders als Marktforschung beschreibt Evaluation nicht nur, sie urteilt – an Kriterien, die wir vorher gemeinsam mit Ihnen festlegen. Mit unserem EVALOG-Modell verbinden wir ein belastbares Messmodell mit dem Originalton der Beteiligten. Grundlage sind die Standards der DeGEval – Gesellschaft für Evaluation.",tags:["EVALOG-Modell","Wirkungsanalyse","Programmevaluation","DeGEval-Standards"],q:"Hat die Maßnahme gewirkt – und was machen wir beim nächsten Mal anders?"},
+    en:{n:"07 / Impact & evaluation",title:"Evaluation assesses whether a measure achieves what it is meant to achieve.",text:"Unlike market research, evaluation does not only describe – it reaches a judgement, against criteria we agree with you in advance. Our EVALOG model combines a robust measurement model with the voices of the people involved. It is based on the evaluation standards of DeGEval, the Evaluation Society.",tags:["EVALOG model","Impact analysis","Programme evaluation","DeGEval standards"],q:"Did the measure work – and what will we do differently next time?"}}
 };
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const detail = document.querySelector("#portfolio-detail");
 let currentField = "marke";
-const fieldLinks = {};
+const fieldLinks = { evaluation:{ url:"/evaluation/", de:"Zum EVALOG-Modell", en:"The EVALOG model (German)" } };
 const renderField = key => {
   currentField = key;
   const f = fields[key][window.siteLang];
@@ -1237,6 +1238,9 @@ contactForm.addEventListener("submit", async event => {
    zugeordnet über den deutschen Text. Neue Texte: hier eine Zeile ergänzen. */
 const EN = {
   "Markt- & Organisationsforschung":"Market & Organisational Research",
+  "Markt-, Organisations- & Evaluationsforschung":"Market, Organisational & Evaluation Research",
+  "Home":"Home",
+  "Spezielle Methoden":"Special methods",
   "Wie wir arbeiten":"How we work",
   "Besondere Zugänge":"Special approaches",
   "Gespräch beginnen":"Start a conversation",
